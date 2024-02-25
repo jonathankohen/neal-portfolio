@@ -4,7 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/typography.css" />
+		<link rel="stylesheet" href="css/typewriter.css" />
+		<link rel="stylesheet" href="css/forms.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/media-queries.css" />
 		<title>Neal Goldman</title>
 	</head>
 	<body>
@@ -42,21 +47,23 @@
 							potential of web design in accomplishing your
 							objectives.
 						</p>
-						<p><a href="/" class="small-caps">HIRE ME</a></p>
+						<p id="hire-link-container">
+							<a href="/" class="link" id="hire-link">HIRE ME</a>
+						</p>
 					</div>
 				</div>
 			</section>
 			<section class="projects">
-				<h2 class="section-title hepta-slab-regular">Projects</h2>
-				<div class="project-titles-container">
-					<div class="project-title">
+				<h2 class="section-title">Projects</h2>
+				<div class="project-headers-container">
+					<div class="project-header">
 						<h3>CLIENT</h3>
 					</div>
-					<div class="project-title">
+					<div class="project-header">
 						<h3>PROJECT</h3>
 					</div>
 				</div>
-				<hr />
+				<hr class="hr-2" />
 				<div class="project-titles-container">
 					<div class="project-title">
 						<h4>The Warehouse</h4>
@@ -64,33 +71,164 @@
 					<div class="project-title">
 						<h4>Website Design</h4>
 					</div>
+					<a
+						href="https://thewarehousevintage.com"
+						class="project-link"
+						target="_blank"
+					>
+						<img src="images/arrow.svg" alt="Arrow link to site" />
+					</a>
 				</div>
 				<div class="project-overlay">
-					<img
-						class="project-overlay-img"
-						src="images/warehouse.png"
-						alt="The Warehouse Vintage"
-					/>
+					<picture>
+						<source
+							media="(min-width:768px)"
+							srcset="images/warehouse.png"
+						/>
+						<img
+							src="images/mobile/warehouse-mobile.png"
+							alt="The Warehouse Vintage"
+							style="width: auto"
+						/>
+					</picture>
 				</div>
-				<hr class="hr-2" />
+				<hr class="hr-3" />
 				<div class="project-titles-container">
 					<div class="project-title">
 						<h4 class="h4-1">Sequency Cybersecurity</h4>
 					</div>
 					<div class="project-title">
-						<h4 class="h4-1">Website Design/Product Design</h4>
+						<h4 class="h4-1">
+							<span class="h4-wrap">Website Design/</span>
+							Product Design
+						</h4>
 					</div>
+					<a
+						href="https://thewarehousevintage.com"
+						class="project-link"
+						target="_blank"
+					>
+						<img src="images/arrow.svg" alt="Arrow link to site" />
+					</a>
 				</div>
 				<div class="project-overlay">
-					<img
-						class="project-overlay-img"
-						src="images/sequency.png"
-						alt="The Warehouse Vintage"
-					/>
+					<picture>
+						<source
+							media="(min-width:768px)"
+							srcset="images/sequency.png"
+						/>
+						<img
+							src="images/mobile/sequency-mobile.png"
+							alt="Sequency"
+							style="width: auto"
+						/>
+					</picture>
 				</div>
 			</section>
 			<section class="contact-me">
-				<h2 class="section-title hepta-slab-regular">Contact Me</h2>
+				<h2 class="section-title contact-me-title">Contact Me</h2>
+				<hr class="hr-4" />
+				<div class="contact-container">
+					<div class="contact-text-container">
+						<p class="lead">
+							Let's build something that kicks ass together.
+						</p>
+						<h3 class="form-h3">Send me a message!</h3>
+						<form action="sendEmail()" method="post">
+							<div class="form-top-row">
+								<div class="form-group">
+									<label class="lead" for="first-name">
+										First name
+									</label>
+									<input
+										type="text"
+										name="first-name"
+										id="first-name"
+										value="Enter first name"
+									/>
+								</div>
+								<div class="form-group">
+									<label class="lead" for="last-name">
+										Last name
+									</label>
+									<input
+										type="text"
+										name="last-name"
+										id="last-name"
+										value="Enter last name"
+									/>
+								</div>
+							</div>
+							<div class="form-middle-row">
+								<div class="form-group">
+									<label class="lead" for="email-address">
+										Email address
+									</label>
+									<input
+										type="email"
+										name="email-address"
+										class="input-full-width"
+										id="email-address"
+										value="Enter email address"
+									/>
+								</div>
+							</div>
+							<div class="form-bottom-row">
+								<div class="form-group">
+									<label class="lead" for="email-address">
+										Message
+									</label>
+									<textarea
+										name="email-msg"
+										class="input-full-width"
+										id="email-msg"
+										cols="30"
+										rows="5"
+									>
+Enter message</textarea
+									>
+								</div>
+							</div>
+							<div class="form-submit">
+								<input
+									type="submit"
+									value="Submit"
+									class="btn"
+								/>
+							</div>
+						</form>
+					</div>
+					<div class="contact-img-container">
+						<img
+							src="images/guitar.png"
+							alt="Neal playing an electric Les Paul guitar."
+							class="contact-guitar-img"
+						/>
+						<div class="contact-links">
+							<a
+								href="https://behance.com"
+								class="link contact-link"
+								target="_blank"
+							>
+								Behance
+							</a>
+							<a
+								href="https://dribble.com"
+								class="link contact-link"
+								target="_blank"
+							>
+								Dribble
+							</a>
+							<a
+								href="https://linkedin.com"
+								class="link contact-link"
+								target="_blank"
+							>
+								LinkedIn
+							</a>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>

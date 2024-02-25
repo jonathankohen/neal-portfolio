@@ -1,0 +1,120 @@
+/* Typewriter */
+
+#tagline {
+	font-family: var(--display);
+	font-size: clamp(32px, 48px, 70px);
+	font-weight: 300;
+	line-height: 188px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-top: 0.5rem;
+}
+
+.line-1 {
+	position: relative;
+	top: 50%;
+	width: 24em;
+	font-family: var(--display);
+	font-size: 150px;
+	font-weight: 300;
+	line-height: 188px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin: 0 auto;
+	border-right: 1px solid rgba(255, 255, 255, 0.75);
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+	animation: typewriter 2s steps(44) 1s 1 normal both,
+		blinkTextCursor 500ms steps(44) 0 infinite normal;
+	-webkit-animation: typewriter 2s steps(44) 1s 1 normal both,
+		blinkTextCursor 500ms steps(44) 0 infinite normal;
+	-moz-animation: typewriter 2s steps(44) 1s 1 normal both,
+		blinkTextCursor 500ms steps(44) 0 infinite normal;
+	-o-animation: typewriter 2s steps(44) 1s 1 normal both,
+		blinkTextCursor 500ms steps(44) 0 infinite normal;
+}
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 24em;
+	}
+}
+
+@-webkit-keyframes typewriter {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 24em;
+	}
+}
+
+@-moz-keyframes typewriter {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 24em;
+	}
+}
+
+@-o-keyframes typewriter {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 24em;
+	}
+}
+
+@keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(255, 255, 255, 0.75);
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
+
+@-webkit-keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(0, 0, 0, 0.75);
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
+
+@-moz-keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(255, 255, 255, 0.75);
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
+
+@-o-keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(255, 255, 255, 0.75);
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
